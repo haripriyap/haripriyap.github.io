@@ -1,3 +1,8 @@
+---
+layout: default
+title: MIMO Geometry
+---
+
 Projection, Subspaces, MIMO, and Beamforming — A Geometric View of Wireless PHY
 
 Introduction
