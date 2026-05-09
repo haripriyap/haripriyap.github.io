@@ -184,7 +184,9 @@ y[0] = \sum r[n] s^*[n]
 
 which is exactly:
 
+$$
 \mathbf{s}^H \mathbf{r}
+$$
 
 Thus:
 
@@ -202,11 +204,15 @@ These are mathematically equivalent.
 
 Suppose two signals:
 
+$$
 \mathbf{s}_1, \mathbf{s}_2
+$$
 
 If:
 
+$$
 \mathbf{s}_1^H \mathbf{s}_2 = 0
+$$
 
 then they are orthogonal.
 
@@ -239,7 +245,9 @@ SVD eigenmodes
 
 Suppose:
 
+$$
 \mathbf{r} = a_1\mathbf{s}_1 + a_2\mathbf{s}_2 + \mathbf{n}
+$$
 
 Then:
 
@@ -276,7 +284,9 @@ recover coordinates within the signal space
 
 For a MIMO system:
 
+$$
 \mathbf{y} = \mathbf{H}\mathbf{x} + \mathbf{n}
+$$
 
 The channel matrix  is not merely algebra.
 
@@ -311,7 +321,9 @@ Thus MIMO detection becomes a geometric subspace-separation problem.
 
 ZF detector:
 
+$$
 \hat{\mathbf{x}} = (\mathbf{H}^H\mathbf{H})^{-1}\mathbf{H}^H\mathbf{y}
+$$
 
 Geometrically this means:
 
@@ -341,7 +353,9 @@ Thus ZF can be interpreted as:
 
 Transmit beamforming:
 
+$$
 \mathbf{x} = \mathbf{w}s
+$$
 
 where:
 
@@ -377,7 +391,9 @@ Transmitter projects energy into basis directions.
 
 SVD decomposition:
 
+$$
 \mathbf{H} = \mathbf{U}\mathbf{\Sigma}\mathbf{V}^H
+$$
 
 Interpretation:
 
@@ -390,11 +406,15 @@ singular values 	gain of each spatial mode
 
 Suppose:
 
+$$
 \mathbf{x} = \sum_i x_i v_i
+$$
 
 Then:
 
+$$
 H\mathbf{x} = \sum_i \sigma_i x_i u_i
+$$
 
 Interpretation:
 
@@ -431,11 +451,15 @@ The coordinate is determined by transmitted data.
 
 Received mode:
 
+$$
 y_i = \sigma_i x_i + n_i
+$$
 
 Received power:
 
+$$
 |y_i|^2 = \sigma_i^2 |x_i|^2
+$$
 
 Thus singular values scale energy in each spatial direction.
 
