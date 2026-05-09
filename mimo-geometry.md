@@ -7,7 +7,7 @@ title: MIMO Geometry
 window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
-    displayMath: [['\\[','\\]']]
+    displayMath: [['$$','$$']]
   }
 };
 </script>
@@ -76,7 +76,9 @@ It can be viewed as a vector in a complex vector space.
 
 For example:
 
+$$
 \mathbf{r} \in \mathbb{C}^N
+$$
 
 means the received signal occupies an N-dimensional complex space.
 
@@ -100,7 +102,9 @@ beamforming becomes directional energy steering
 
 In OFDM, the basis functions are:
 
+$$
 \phi_k[n] = e^{j2\pi kn/N}
+$$
 
 These are orthogonal basis vectors/functions.
 
