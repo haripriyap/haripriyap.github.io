@@ -110,7 +110,9 @@ These are orthogonal basis vectors/functions.
 
 Any OFDM symbol can be represented as:
 
+$$
 x[n] = \sum_{k=0}^{N-1} X_k \phi_k[n]
+$$
 
 Interpretation:
 
@@ -129,7 +131,9 @@ Thus FFT decomposes a signal into coordinates along orthogonal frequency-space d
 
 Suppose:
 
+$$
 \mathbf{r} = a\mathbf{s} + \mathbf{n}
+$$
 
 where:
 
@@ -140,7 +144,9 @@ where:
 
 The receiver computes:
 
+$$
 \mathbf{s}^H \mathbf{r}
+$$
 
 Geometrically this means:
 
@@ -166,7 +172,9 @@ all viewed from different perspectives.
 
 In classical DSP, matched filter impulse response is:
 
+$$
 h[n] = s^*[-n]
+$$
 
 because convolution inherently slides one signal across another.
 
