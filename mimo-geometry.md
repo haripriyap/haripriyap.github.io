@@ -4,17 +4,6 @@ title: MIMO Geometry
 ---
 
 <script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    displayMath: [['$$','$$']]
-  }
-};
-</script>
-
-<script defer
-src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 
 # Projection, Subspaces, MIMO, and Beamforming 
 Projection, Subspaces, MIMO, and Beamforming — A Geometric View of Wireless PHY
