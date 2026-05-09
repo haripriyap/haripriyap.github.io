@@ -1,5 +1,3 @@
-# Adaptive PHY
-
 Simulation-driven wireless PHY systems, synchronization, and adaptive receiver research.
 
 ---
