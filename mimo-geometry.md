@@ -3,8 +3,6 @@ layout: default
 title: MIMO Geometry
 ---
 
-<script>
-
 # Projection, Subspaces, MIMO, and Beamforming 
 Projection, Subspaces, MIMO, and Beamforming — A Geometric View of Wireless PHY
 
