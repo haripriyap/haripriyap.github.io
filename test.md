@@ -3,21 +3,10 @@ layout: default
 title: Test
 ---
 
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['\','\']],
-    displayMath: [['\','\']]
-  }
-};
-</script>
+# Math Test
 
-<script defer
-src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
+Inline math: \(x^2 + y^2\)
 
-# Test Equation
-
-\[
-E = mc^2
-\]
+$$
+\mathbf{r} \in \mathbb{C}^N
+$$
