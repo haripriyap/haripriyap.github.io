@@ -1,3 +1,16 @@
+---
+title: "Doppler Correlation in Wireless PHY | Geometric Interpretation"
+description: "Geometric interpretation of Doppler correlation, matched filtering, OFDM intuition, and signal-space analysis in wireless PHY."
+---
+
+# Doppler Correlation in Wireless PHY
+
+## Geometric Interpretation
+
+## Signal-Space View
+
+## Relation to Matched Filtering
+
 # Correlation Geometry Under Doppler
 
 ## Core Idea
