@@ -1,6 +1,7 @@
 ---
 layout: default
-title: MIMO Geometry
+title: "Geometric Interpretation of MIMO Systems | Signal-Space View"
+description: "Understanding MIMO channels through vector spaces, beamforming, projections, eigenmodes, SVD, and signal-space geometry in wireless PHY systems."
 ---
 
 <script>
@@ -15,6 +16,23 @@ window.MathJax = {
 <script defer
 src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
+
+Related article:
+[Doppler Correlation in Wireless PHY](doppler-correlation.html)
+
+# Geometric Interpretation of MIMO Systems
+
+## MIMO as a Signal-Space Transformation
+
+## Beamforming as Direction Selection
+
+## SVD and Channel Eigenmodes
+
+## Projection Geometry in MIMO Receivers
+
+## Noise Geometry and MMSE Intuition
+
+## Relation to OFDM and Wireless PHY
 
 # Projection, Subspaces, MIMO, and Beamforming 
 Projection, Subspaces, MIMO, and Beamforming — A Geometric View of Wireless PHY
