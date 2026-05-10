@@ -1,3 +1,4 @@
 title: Adaptive PHY
 description: Simulation-driven wireless PHY systems and adaptive receiver research
 theme: minima
+markdown: kramdown
