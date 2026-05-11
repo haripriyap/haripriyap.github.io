@@ -6,6 +6,22 @@ layout: post
 
 # Why UAVs Break Classical PHY Assumptions in 6G Systems
 
+This article is part of an ongoing exploration of **Doppler behavior and coherence breakdown in high-mobility wireless systems**.
+
+The simulation and analysis foundation for this work is available here:
+
+👉 https://github.com/haripriyap/doppler-coherence-analysis
+
+That repository contains:
+- Doppler coherence estimation experiments  
+- coherence boundary behavior under mobility  
+- efficiency vs Doppler tradeoff analysis  
+- simulation framework for high-mobility channel behavior  
+
+This blog extends those results into a **system-level UAV + 6G interpretation**.
+
+---
+
 ## 1. Introduction
 
 Classical wireless PHY design is built on a few key assumptions:
@@ -18,185 +34,158 @@ Classical wireless PHY design is built on a few key assumptions:
 
 These assumptions work well for LTE/5G terrestrial systems and pedestrian or vehicular mobility scenarios.
 
-However, UAV (drone) communication systems violate multiple assumptions simultaneously. In emerging 6G networks, where UAVs are expected to play roles in connectivity, sensing, and aerial relaying, classical PHY models begin to degrade.
-
-This article explains why this breakdown happens and what it implies at the system level.
+However, UAV (drone) communication systems violate multiple assumptions simultaneously.
 
 ---
 
-## 2. UAVs introduce fundamentally different mobility geometry
+## 2. Connection to Doppler-Coherence Analysis
 
-Unlike ground users, UAVs operate in a true **3D mobility space**:
+The key insight behind this work comes directly from the simulation results in:
+
+👉 https://github.com/haripriyap/doppler-coherence-analysis
+
+That study shows:
+
+- coherence is not a fixed boundary in high mobility  
+- Doppler introduces **gradual degradation of stability rather than sharp failure**  
+- estimation efficiency drops non-linearly with mobility  
+- classical coherence time assumptions begin to break under realistic motion profiles  
+
+This UAV discussion is a **system-level extension of those findings**.
+
+---
+
+## 3. UAVs introduce fundamentally different mobility geometry
+
+Unlike ground users, UAVs operate in a true 3D mobility space:
 
 - altitude changes dynamically  
 - trajectory is not constrained by roads  
-- line-of-sight (LoS) conditions vary rapidly  
+- line-of-sight conditions vary rapidly  
 - velocity direction changes continuously  
 
-This leads to a key shift:
+This transforms the channel from:
 
-> The channel is no longer a function of position alone, but of trajectory evolution in 3D space.
-
-Even small variations in altitude or direction can significantly change:
-- path loss  
-- multipath structure  
-- Doppler characteristics  
+> position-based → trajectory-based evolution system
 
 ---
 
-## 3. Doppler becomes non-stationary
+## 4. Doppler becomes non-stationary
 
-In classical OFDM systems, Doppler is assumed to be:
-- bounded  
-- slowly varying within a coherence interval  
+From the repository results, Doppler behavior already shows:
 
-For UAVs, this assumption breaks because:
+- non-linear coherence degradation  
+- sensitivity to velocity variation  
+- breakdown of stable estimation regions  
 
-- velocity vectors change in 3D  
-- angle of arrival evolves continuously  
-- LoS dominates but is highly dynamic  
-- reflections depend on environment geometry  
+In UAV systems, this effect becomes stronger because:
 
-As a result:
+- motion is vector-driven in 3D  
+- angle-of-arrival changes continuously  
+- LoS dominates but fluctuates rapidly  
 
-> Doppler is no longer a constant impairment — it becomes a time-varying process itself.
+Thus:
 
-Implications:
-- unstable phase rotation  
-- degraded subcarrier orthogonality  
-- reduced estimation reliability  
+> Doppler is not a constant impairment — it becomes a time-varying process itself.
 
 ---
 
-## 4. Breakdown of coherence time assumption
+## 5. Breakdown of coherence time assumption
 
-Coherence time represents the duration over which a channel is assumed invariant.
-
-For UAV channels:
-
-- fast directional changes shorten coherence time  
-- LoS sensitivity increases angular variation impact  
-- small trajectory deviations cause large channel shifts  
-
-Key issue:
-
-> The system fails not because SNR is low, but because channel statistics change faster than estimation can track.
-
----
-
-## 5. Pilot-based channel estimation becomes inefficient
-
-Classical PHY relies on structured pilot patterns:
-
-- moderate mobility assumption  
-- quasi-stationary channel blocks  
-- predictable correlation structure  
+The repository demonstrates that coherence is not absolute — it degrades gradually with mobility.
 
 In UAV systems:
 
-- rapid channel decorrelation  
-- increased pilot density requirement  
-- reduced spectral efficiency  
+- coherence shrinks faster due to angular dynamics  
+- estimation error accumulates more rapidly  
+- channel statistics evolve within short intervals  
 
-This creates a fundamental tradeoff:
+Key insight:
 
-> Higher mobility demands more pilots, but more pilots reduce throughput.
-
-This becomes critical in UAV swarms.
+> The system fails not due to SNR collapse, but due to mismatch between channel evolution and estimation tracking speed.
 
 ---
 
-## 6. Handover and beam tracking instability
+## 6. Pilot inefficiency becomes structural
 
-UAV systems experience:
+From simulation trends in the repository:
 
-- frequent serving cell transitions  
-- unstable beam alignment  
-- rapid LoS/NLoS switching  
+- higher Doppler → lower estimation efficiency  
+- more frequent updates required → higher overhead cost  
 
-Consequences:
+In UAV systems, this becomes critical:
 
-- reactive beam tracking becomes insufficient  
-- control loops lag behind mobility  
-- latency spikes occur in dense deployments  
+> pilot overhead scales faster than capacity gain in high mobility regimes
 
 ---
 
-## 7. Swarm behavior introduces correlation complexity
+## 7. Swarm behavior amplifies coherence breakdown
 
-Future UAV networks are not independent nodes. They operate as:
+When multiple UAVs operate together:
 
-- coordinated swarms  
-- distributed sensing systems  
-- cooperative communication agents  
+- channel correlation increases  
+- Doppler fields become coupled  
+- estimation errors propagate spatially  
 
-This introduces:
+This extends single-link behavior observed in the repository into:
 
-- correlated interference patterns  
-- coupled mobility behavior  
-- joint channel evolution  
-
-Thus, channel modeling shifts from:
-
-> independent links → coupled spatio-temporal graphs
+> a coupled spatio-temporal coherence system
 
 ---
 
-## 8. Key insight: Why classical PHY breaks
+## 8. Key system insight
 
-The core issue is not only high mobility.
+Combining simulation evidence + UAV system behavior:
 
-It is the combination of:
+Classical PHY assumes:
 
-- fast time variation  
-- 3D spatial dynamics  
-- network-level coupling  
-- LoS-dominated sensitivity  
+> channel stability within a coherence interval
 
-This breaks the fundamental assumption:
+But observed behavior shows:
 
-> Channel can be estimated and assumed stable within a coherence interval.
+- coherence is **emergent, not fixed**
+- it depends on mobility structure
+- it degrades continuously, not abruptly
 
 ---
 
 ## 9. What 6G changes
 
-6G introduces architectural shifts:
+6G introduces mechanisms that directly respond to these observations:
 
-- AI-native channel prediction  
-- integrated sensing and communication (ISAC)  
-- edge-based real-time adaptation  
-- 3D beamforming and spatial awareness  
-- mobility-aware resource allocation  
+- AI-assisted channel prediction  
+- ISAC-based environment awareness  
+- edge-based adaptive PHY control  
+- mobility-aware beam management  
+- predictive rather than reactive estimation  
 
-This shifts PHY design from:
+This shifts system design from:
 
-> reactive estimation → predictive adaptation
+> estimation → prediction-driven adaptation
 
 ---
 
 ## 10. Conclusion
 
-UAV systems expose a fundamental limitation in classical PHY design:
+UAV systems expose a fundamental limitation in classical PHY modeling:
 
-> Wireless channels are not only random processes — they are trajectory-driven dynamic systems in 3D space.
+> Wireless channels are trajectory-driven dynamic systems, not stationary random processes.
 
-As UAV density increases in 6G, PHY design must evolve from:
+The Doppler-Coherence analysis repository provides empirical evidence that:
 
-- static coherence-based modeling  
-to  
-- adaptive, predictive, AI-assisted channel evolution modeling  
+- coherence is mobility-dependent  
+- estimation efficiency degrades continuously  
+- classical assumptions break gradually, not abruptly  
 
-This transition forms a key research direction for future AI-native PHY and ORAN-aligned systems.
+UAV networks amplify these effects, making them a key testbed for future AI-native PHY design.
 
 ---
 
 ## Future Work
 
-This article presents a conceptual breakdown of PHY assumptions under UAV mobility.
+Next steps will extend this direction into:
 
-Future work will focus on:
-- Doppler non-stationarity modeling  
-- coherence time breakdown quantification  
-- pilot overhead scaling in UAV swarms  
-- simulation-based validation of adaptive receivers
+- UAV-specific Doppler evolution modeling  
+- pilot overhead scaling laws in swarm systems  
+- AI-based coherence prediction models  
+- ORAN-aligned adaptive PHY architectures
