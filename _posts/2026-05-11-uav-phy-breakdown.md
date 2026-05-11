@@ -149,6 +149,21 @@ But observed behavior shows:
 
 ---
 
+High UAV Mobility
+        ↓
+Rapid Doppler Variation
+        ↓
+Coherence Instability
+        ↓
+Pilot Estimation Degradation
+        ↓
+Beam Tracking Errors
+        ↓
+PHY Adaptation Failure
+        ↓
+Need for AI-Native Predictive PHY
+---
+
 ## 9. What 6G changes
 
 6G introduces mechanisms that directly respond to these observations:
