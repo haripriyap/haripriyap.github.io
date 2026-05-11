@@ -148,21 +148,24 @@ But observed behavior shows:
 - it degrades continuously, not abruptly
 
 ---
+
+## From Doppler Variation to AI-Native PHY
+
 <div align="center">
 
-High UAV Mobility  
-↓  
-Rapid Doppler Variation  
-↓  
-Coherence Instability  
-↓  
-Pilot Estimation Degradation  
-↓  
-Beam Tracking Errors  
-↓  
-PHY Adaptation Failure  
-↓  
-Need for AI-Native Predictive PHY  
+High UAV Mobility<br>
+↓<br>
+Rapid Doppler Variation<br>
+↓<br>
+Coherence Instability<br>
+↓<br>
+Pilot Estimation Degradation<br>
+↓<br>
+Beam Tracking Errors<br>
+↓<br>
+PHY Adaptation Failure<br>
+↓<br>
+Need for AI-Native Predictive PHY
 
 </div>
 
