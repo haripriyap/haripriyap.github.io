@@ -148,20 +148,24 @@ But observed behavior shows:
 - it degrades continuously, not abruptly
 
 ---
+<div align="center">
 
-High UAV Mobility
-        ↓
-Rapid Doppler Variation
-        ↓
-Coherence Instability
-        ↓
-Pilot Estimation Degradation
-        ↓
-Beam Tracking Errors
-        ↓
-PHY Adaptation Failure
-        ↓
-Need for AI-Native Predictive PHY
+High UAV Mobility  
+↓  
+Rapid Doppler Variation  
+↓  
+Coherence Instability  
+↓  
+Pilot Estimation Degradation  
+↓  
+Beam Tracking Errors  
+↓  
+PHY Adaptation Failure  
+↓  
+Need for AI-Native Predictive PHY  
+
+</div>
+
 ---
 
 ## 9. What 6G changes
